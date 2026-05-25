@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Ahorro Colectivo: Método Fibonacci</title>
+    <link rel="stylesheet" href="estilos.css\style.css">
+</head>
+<body>
+
+    <header id="cabeceraPrincipal">
+        <div class="header-content">
+            <h1>Desafío Web 2005</h1>
+            <h2>Matemáticas que resuelven problemas: Fibonacci en la vida real</h2>
+            <p class="estudiante-datos">Autor: Ignacio Cortez Mansilla</p>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        
+        <article id="bloqueContexto" class="seccion-bloque">
+            <h3>¿Por qué aplicar Fibonacci al ahorro?</h3>
+            <p>
+                El principal enemigo del ahorro es la falta de motivación y la monotonía. Los planes de ahorro tradicionales con cuotas fijas suelen abandonarse rápido. 
+            </p>
+            <p>
+                Este sistema utiliza la **Sucesión de Fibonacci** para crear un plan dinámico de acelaración financiera. Al ligar cada depósito mensual a la suma de los dos meses anteriores, el esfuerzo crece de forma escalonada, permitiendo acumular sumas importantes en periodos cortos de tiempo y desafiando la capacidad de generación de ingresos del usuario.
+            </p>
+        </article>
+
+        <article id="bloqueAlgoritmo" class="seccion-bloque">
+            <h3>El Algoritmo Detrás del Plan</h3>
+            <p>
+                La lógica matemática toma como base que los dos primeros meses se inicia depositando la unidad básica (1 Bs.). A partir del tercer mes, el sistema ejecuta la fórmula:
+            </p>
+            <div class="formula-box">
+                Ahorro Actual = Ahorro (Mes Anterior) + Ahorro (Dos Meses Atrás)
+            </div>
+            <p>
+                El programa realiza este cálculo de forma limpia e iterativa mediante un bucle cerrado, acumulando el dinero de manera progresiva mes a mes sin necesidad de almacenar datos en vectores pesados.
+            </p>
+        </article>
+
+        <section id="bloqueFormulario" class="seccion-bloque">
+            <h3>Configura tu Proyección Financiera</h3>
+            <form id="formFinanzas">
+                <div class="control-input">
+                    <label for="inputMeses">¿Cuántos meses deseas proyectar?</label>
+                    <input type="number" id="inputMeses" min="1" max="25" placeholder="Ej. 6, 12, 18..." required>
+                    <span class="ayuda-input">Sugerencia: Introduce un valor entre 1 y 25 debido al crecimiento exponencial.</span>
+                </div>
+                <button type="submit" id="btnDispararCalculo">Generar Mi Plan de Ahorro</button>
+            </form>
+        </section>
+
+        <section id="panelResultados" class="seccion-bloque vision-oculta">
+            <h3>Tu Estrategia de Ahorro Generada</h3>
+            <div id="tarjetaResumen" class="caja-totales"></div>
+            
+            <div class="contenedor-tabla-responsiva">
+                <table id="tablaResultados">
+                    <thead>
+                        <tr>
+                            <th>Periodo</th>
+                            <th>Aporte del Mes</th>
+                            <th>Fondo Acumulado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCuerpoFilas">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="bloqueConclusion" class="seccion-bloque">
+            <h3>Conclusión de la Aplicación</h3>
+            <p>
+                La implementación de este modelo demuestra que las matemáticas aplicadas son una solución óptima para los problemas cotidianos. La progresión de Fibonacci nos demuestra visual y económicamente cómo pequeños esfuerzos iniciales acumulados con constancia se transforman en capitales significativos, optimizando el comportamiento financiero de cualquier persona.
+            </p>
+        </section>
+
+    </main>
+
+    <footer id="piePagina">
+        <p>Documentación y Despliegue del Proyecto:</p>
+        <div class="red-enlaces">
+            <a href="https://github.com/ignaciocortez446/desafio-lunes-tarea" target="_blank" id="enlaceGit">Código en GitHub</a>
+            <a href="https://ignaciocortez446.github.io/desafio-lunes-tarea/" target="_blank" id="enlaceDespliegue">Sitio Web en Vivo</a>
+        </div>
+    </footer>
+
+    <script src="javascrpit\script.js"></script>
+</body>
+</html>
